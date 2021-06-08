@@ -6,8 +6,9 @@ import App from './containers/App';
 import rootReducer from './store/root-reducer';
 import { createApi } from './api/api';
 import browserHistory from './browser-history';
-import { fetchData } from './store/data/api-actions';
+import { getServers } from './store/data/actions';
 import { Router } from 'react-router-dom';
+import { data } from './mock/data';
 
 import './index.css';
 
@@ -22,9 +23,7 @@ const store = configureStore({
   })
 });
 
-console.log(store);
-
-store.dispatch(fetchData());
+store.dispatch(getServers(data));
 
 ReactDOM.render(
   <Provider store={store}>

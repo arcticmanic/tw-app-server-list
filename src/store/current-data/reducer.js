@@ -5,7 +5,11 @@ import {
 import { createReducer } from '@reduxjs/toolkit';
 
 export const initialState = {
-  currentServer: null,
+  currentServer: {
+    customer_id: 'user1',
+    server_name: 'server7',
+    server_type: 'vds',
+  },
 };
 
 const currentServerData = createReducer(initialState, (builder) => {
