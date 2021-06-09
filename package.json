@@ -2,6 +2,7 @@
   "name": "tw-app-server-list",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://arcticmanic.github.io/tw-app-server-list/",
   "dependencies": {
     "@craco/craco": "^6.1.2",
     "@reduxjs/toolkit": "^1.6.0",
@@ -9,6 +10,7 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "axios": "^0.21.1",
+    "gh-pages": "^3.2.0",
     "history": "^5.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -21,6 +23,8 @@
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
+    "deploy": "gh-pages -d build",
+    "predeploy": "npm run build",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
