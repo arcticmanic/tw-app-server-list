@@ -1,8 +1,11 @@
 import React, { useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { setServerName, setServerType } from '../../store/current-data/actions';
 
 const Form = () => {
   const { currentServer } = useSelector((state) => state.CURRENT_DATA);
+  const dispatch = useDispatch();
+  const serverForm = useRef();
 
   const {
     customer_id: customerId,
@@ -10,25 +13,22 @@ const Form = () => {
     server_type: serverType,
   } = currentServer;
 
-  const handleInputChange = ({target}) => {
-    console.log(target);
-  };
+  const handleFormSubmit = (evt) => {
+    evt.preventDefault();
+    const inputField = serverForm.current.querySelector('#server_name');
+    const selectField = serverForm.current.querySelector('#server_type');
 
-  const handleSelectChange = ({target}) => {
-    console.log(target);
-  };
-
-  const handleSaveClick = ({target}) => {
-    console.log(target);
-  };
-
-  const handleResetClick = ({target}) => {
-    console.log(target);
+    dispatch(setServerName(inputField.value));
+    dispatch(setServerType(selectField.value));
   };
 
   return (
     <div className="leading-loose w-full">
-      <form className="max-w-xl m-auto p-10 bg-white rounded shadow-xl">
+      <form
+        className="max-w-xl m-auto p-10 bg-white rounded shadow-xl"
+        ref={serverForm}
+        onSubmit={handleFormSubmit}
+      >
         <div className="text-gray-800 font-medium">Server information</div>
         {customerId && (
           <div className="text-md text-gray-400">
@@ -66,7 +66,6 @@ const Form = () => {
             required="required"
             placeholder="Server name"
             aria-label="Server name"
-            onChange={handleInputChange}
           />
         </div>
         <div className="mt-3">
@@ -78,35 +77,24 @@ const Form = () => {
             required="required"
             name="server_type"
             id="server_type"
-            onChange={handleSelectChange}
           >
-            <option value="null" disabled>
+            <option value="">
               Choose server type
             </option>
-            <option value="1">Server 1</option>
-            <option value="2">Server 2</option>
-            <option value="3">Server 3</option>
-            <option value="4">Server 4</option>
+            <option value="vds">vds</option>
+            <option value="dedicated">dedicated</option>
+            <option value="hosting">hosting</option>
           </select>
         </div>
         <div className="flex mt-3">
-          <button
-            className="mr-5"
-            type="button"
-            onClick={handleSaveClick}
-          >
+          <button className="mr-5" type="submit">
             Save
           </button>
-          <button
-            type="button"
-            onClick={handleResetClick}
-          >
-            Reset
-          </button>
+          <button type="reset">Reset</button>
         </div>
       </form>
     </div>
   );
-}
+};
 
-export default Form
+export default Form;

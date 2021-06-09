@@ -1,6 +1,8 @@
 import {
   clearCurrentOffer,
   getCurrentServer,
+  setServerName,
+  setServerType,
 } from './actions';
 import { createReducer } from '@reduxjs/toolkit';
 
@@ -18,6 +20,12 @@ const currentServerData = createReducer(initialState, (builder) => {
   });
   builder.addCase(clearCurrentOffer, (state) => {
     state.currentServer = null;
+  });
+  builder.addCase(setServerName, (state, action) => {
+    state.currentServer.server_name = action.payload;
+  });
+  builder.addCase(setServerType, (state, action) => {
+    state.currentServer.server_type = action.payload;
   });
 });
 
