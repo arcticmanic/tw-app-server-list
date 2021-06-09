@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+# Тестовое задание
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Требуется создать приложение (SPA/SSR) для редактирования списка
+серверов клиентов. Список серверов клиентов представлен коллекцией
+моделей вида:
 
-## Available Scripts
+```json
+[
+  {
+    "customer_id": "user1",
+    "server_name": "server7",
+    "server_type": "vds"
+  },
+  {
+    "customer_id": "user5",
+    "server_name": "server2",
+    "server_type": "dedicated"
+  },
+  {
+    "customer_id": "user3",
+    "server_name": "server4",
+    "server_type": "hosting"
+  }
+]
+```
 
-In the project directory, you can run:
+## Приложение должно реализовать:
+* вывод списка моделей;
+* выбор модели для редактирования;
+* редактирование свойств модели:
+  * имя сервера `(server_name), input`;
+  * тип сервера `(server_type), select`;
 
-### `yarn start`
+## Требования к приложению:
+* Для реализации использовать `React.js` или нативный `js`;
+* Выполнить базовую верстку страницы. Интерфейс приложения состоит из списка слева и формы редактирования справа.
+* Продемонстрировать владение `ES6+`, `SCSS`/`LESS`/`Stylus`;
+* Если ранее использовали `Typescript`, то покажите это в тестовом задании (не обязательно);
+* Можно использовать любой `UI` фреймворк, например, `Bootstrap` или `Tailwind` (не обязательно).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Результат:
+* В качестве результата ждём ссылку на публичный `git`-репозиторий с заполненным `Readme.md`;
+* Будет круто (но не обязательно), если вы разместите свой проект на бесплатном ресурсе, например, на `Github Pages`.
