@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setServerName, setServerType } from '../../store/current-data/actions';
+import { updateServer } from '../../store/data/actions';
 
 const Form = () => {
   const { currentServer } = useSelector((state) => state.CURRENT_DATA);
@@ -20,6 +21,13 @@ const Form = () => {
 
     dispatch(setServerName(inputField.value));
     dispatch(setServerType(selectField.value));
+    dispatch(
+      updateServer({
+        customer_id: customerId,
+        server_name: inputField.value,
+        server_type: selectField.value,
+      })
+    );
   };
 
   return (
