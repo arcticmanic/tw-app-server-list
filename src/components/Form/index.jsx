@@ -2,9 +2,10 @@ import React, { useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setServerName, setServerType } from '../../store/current-data/actions';
 import { updateServer } from '../../store/data/actions';
+import { getCurrentServer } from '../../store/current-data/selectors';
 
 const Form = () => {
-  const { currentServer } = useSelector((state) => state.CURRENT_DATA);
+  const { currentServer } = useSelector(getCurrentServer);
   const dispatch = useDispatch();
   const serverForm = useRef();
 
@@ -86,9 +87,7 @@ const Form = () => {
             name="server_type"
             id="server_type"
           >
-            <option value="">
-              Choose server type
-            </option>
+            <option value="">Choose server type</option>
             <option value="vds">vds</option>
             <option value="dedicated">dedicated</option>
             <option value="hosting">hosting</option>
