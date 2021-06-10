@@ -53,4 +53,3 @@ npm run build
 * использовать createSelector
 * использовать typescript
 * брать "живые" данные
-* стилизовать
