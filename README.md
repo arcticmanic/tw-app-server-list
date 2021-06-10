@@ -1,3 +1,9 @@
+# Адрес проекта
+https://arcticmanic.github.io/tw-app-server-list/
+
+# Репозиторий проекта
+https://arcticmanic.github.io/
+
 # Тестовое задание
 
 Требуется создать приложение (SPA/SSR) для редактирования списка
