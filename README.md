@@ -2,7 +2,7 @@
 https://arcticmanic.github.io/tw-app-server-list/
 
 # Репозиторий проекта
-https://arcticmanic.github.io/
+https://github.com/arcticmanic/tw-app-server-list
 
 # Тестовое задание
 
