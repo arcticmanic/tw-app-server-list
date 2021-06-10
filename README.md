@@ -48,3 +48,9 @@ npm run start
 
 ## Build
 npm run build
+
+## To-Do
+* использовать createSelector
+* использовать typescript
+* брать "живые" данные
+* стилизовать
