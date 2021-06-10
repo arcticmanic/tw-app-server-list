@@ -15,7 +15,7 @@ const ListItem = ({server}) => {
   };
 
   return (
-    <li className="flex items-center py-5 border-b px-3 transition hover:bg-indigo-100">
+    <li className="flex items-center rounded shadow mb-3 py-5 border-b px-3 transition hover:bg-indigo-100">
       <div className="flex-grow">
         {customerId && (
           <div className="text-md text-gray-400">

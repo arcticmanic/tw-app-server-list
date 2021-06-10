@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body, .app-container {
-  height: 100%;
+body {
+  min-height: 100vh;
+  background: wheat;
+}
+
+.app-container {
+  min-height: 100vh;
 }

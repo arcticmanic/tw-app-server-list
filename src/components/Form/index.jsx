@@ -4,6 +4,8 @@ import { setServerName, setServerType } from '../../store/current-data/actions';
 import { updateServer } from '../../store/data/actions';
 import { getCurrentServer } from '../../store/current-data/selectors';
 
+import './Form.css';
+
 const Form = () => {
   const { currentServer } = useSelector(getCurrentServer);
   const dispatch = useDispatch();
@@ -94,10 +96,12 @@ const Form = () => {
           </select>
         </div>
         <div className="flex mt-3">
-          <button className="mr-5" type="submit">
+          <button className="button mr-5" type="submit">
             Save
           </button>
-          <button type="reset">Reset</button>
+          <button className="button" type="reset">
+            Reset
+          </button>
         </div>
       </form>
     </div>

@@ -7,7 +7,7 @@ const List = () => {
   const { servers } = useSelector(getServers);
 
   return (
-    <section className="flex flex-col pt-3 w-1/3 bg-gray-50 overflow-y-scroll">
+    <section className="flex flex-col p-4 w-full md:w-1/3 overflow-y-scroll max-w-xl max-h-96 m-auto bg-white rounded shadow-xl">
       <ul>
         {servers.map((server, id) => (
           <ListItem key={id} server={server} />
